@@ -1,6 +1,7 @@
 get '/' do
   # render home page
   @users = User.all
+  @skills = Skill.all
 
   erb :index
 end

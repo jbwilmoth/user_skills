@@ -3,8 +3,11 @@ class CreateSkills < ActiveRecord::Migration
     create_table :skills do |t|
       t.string :name
       t.string :context
+      t.belongs_to :user
 
       t.timestamps
     end
+
+    add_index :skills, :user_id
   end
 end
